@@ -37,10 +37,8 @@ group :test do
   gem 'turn', '0.8.2', :require => false
 end
 
-group :activeadmin do
-  gem 'activeadmin'
-  gem "meta_search",    '>= 1.1.0.pre' #as suggested by http://activeadmin.info/documentation.html
-end
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre' #as suggested by http://activeadmin.info/documentation.html
 
 gem 'rake'
 gem 'haml-rails'
