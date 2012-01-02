@@ -1,4 +1,9 @@
 ActiveAdmin.register Script do
+  scope :all, :default => true
+
+  filter :campaigns_id, :as => :check_boxes, :collection => proc { Campaign.all }
+  filter :events_id, :as => :check_boxes, :collection => proc { Event.all }
+
   form do |f|
     f.inputs "Tracker Script" do
       f.inputs "Only for these Campaigns" do
