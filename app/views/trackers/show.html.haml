@@ -1,8 +1,8 @@
 %h1 tracker test
-#insert-here
 %script{:src => "http://localhost:3000/assets/tracker.js", :type => "text/javascript"}
 :javascript
   hf.track({
       event_id: "some event",
       ref: "#{params[:ref]}"
   });
+#tracking-scripts
