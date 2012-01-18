@@ -1,4 +1,7 @@
 ActiveAdmin.register Campaign do
+  controller.authorize_resource
+  menu :priority => 10, :if => Proc.new { can? :read, Campaign}
+    
   form do |f|
     f.inputs "Campaigns" do
       f.inputs "Active Scripts" do

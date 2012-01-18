@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+  controller.authorize_resource
+  menu :priority => 99, :if => Proc.new { can? :read, User}
 
   filter :email
   filter :first_name

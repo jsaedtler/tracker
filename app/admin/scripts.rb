@@ -1,6 +1,9 @@
 ActiveAdmin.register Script do
-  scope :all, :default => true
+  controller.authorize_resource
+  menu :priority => 30, :if => Proc.new { can? :manage, Script}
 
+  scope :all, :default => true
+  
   filter :campaigns_id, :as => :check_boxes, :collection => proc { Campaign.all }
   filter :events_id, :as => :check_boxes, :collection => proc { Event.all }
 

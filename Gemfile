@@ -42,3 +42,4 @@ gem "meta_search",    '>= 1.1.0.pre' #as suggested by http://activeadmin.info/do
 
 gem 'rake'
 gem 'haml-rails'
+gem 'cancan'
