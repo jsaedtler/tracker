@@ -29,9 +29,10 @@ class Ability
       if user.role? :system_admin
         can :manage, :all
       else
-        can :manage, Campaign
         can :manage, Script
+        can :manage, Campaign
         can :read, Event
+        # can :manage, Deal
       end
     end
   end
